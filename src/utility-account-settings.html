@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="es">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52115242-14"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-52115242-14');
+    </script>
+    
+    <meta charset="utf-8">
+    <title>Datos generales</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descripción">
+    <link href="assets/img/favicon.ico" rel="icon" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
+    <link href="assets/css/theme.css" rel="stylesheet" type="text/css" media="all" />
+  </head>
+
+  <body>
+
+    <div class="layout layout-nav-side">
+      <div class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+
+        <a class="navbar-brand" href="https://www.ipn.mx/" target="_blank">
+          <!--Implementación-->
+          <!--==============================-->
+          <img alt="Logo IPN" src="assets/img/logoIPNBlanco.png" height="46px" /><!--Original: 36px-->
+          <!--==============================-->
+        </a>
+        <div class="d-flex align-items-center">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="d-block d-lg-none ml-2">
+            <div class="dropdown">
+              <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img alt="Image" src="assets/img/fotoPerfilGenerica.png" class="avatar" />
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a href="utility-login.html" class="dropdown-item">Iniciar Sesión</a>
+                <a href="utility-create-account.html" class="dropdown-item">Registrarse</a>
+                <a href="utility-account-settings.html" class="dropdown-item">Datos Generales</a>
+                <a href="index.html" class="dropdown-item">Cerrar Sesión</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse flex-column" id="navbar-collapse">
+          <ul class="navbar-nav d-lg-block">
+            <!--Implementación-->
+            <!--==============================-->
+
+            <li class="nav-item">
+
+              <a class="nav-link" href="index.html">Página Principal</a>
+
+            </li>
+
+            <li class="nav-item">
+
+              <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2">Contenido</a>
+              <div id="submenu-2" class="collapse">
+                <ul class="nav nav-small flex-column">
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="nav-side-user.html">Grupos</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="utility-account-settings.html">Datos Generales</a>
+                  </li>
+
+                </ul>
+              </div>
+
+            </li>
+
+            <li class="nav-item">
+
+              <a class="nav-link" href="documentation/index.html">Acerca De</a>
+
+            </li>
+            
+            <!--==============================-->
+          </ul>
+          <hr>
+          <div class="d-none d-lg-block w-100">
+            <span class="text-small text-muted">Enlaces rapidos</span>
+            <ul class="nav nav-small flex-column mt-2">
+              <!--Implementación-->
+              <!--==============================-->
+              <li class="nav-item">
+                <a href="down-pdf.html" class="nav-link">Descargar Horario de Examen Diagnostico</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Ir al Examen Diagnostico</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://www.escom.ipn.mx/" target="_blank" class="nav-link">Informes</a>
+              </li>
+              <!--==============================-->
+            </ul>
+          </div>
+        </div>
+        <div class="d-none d-lg-block">
+          <div class="dropup">
+            <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img alt="Image" src="assets/img/fotoPerfilGenerica.png" class="avatar" />
+            </a>
+            <div class="dropdown-menu">
+              <a href="utility-login.html" class="dropdown-item">Iniciar Sesión</a>
+              <a href="utility-create-account.html" class="dropdown-item">Registrarse</a>
+              <a href="utility-account-settings.html" class="dropdown-item">Datos Generales</a>
+              <a href="index.html" class="dropdown-item">Cerrar Sesión</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="main-container">
+
+        <div class="breadcrumb-bar navbar bg-white sticky-top">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Principal</a>
+              </li>
+              <li class="breadcrumb-item">Contenido</li>
+              <li class="breadcrumb-item active" aria-current="page">Datos Generales</li>
+            </ol>
+          </nav>
+
+        </div>
+        <div class="container">
+          <div class="row justify-content-center mt-5">
+            <div class="col-lg-3 mb-3">
+              <ul class="nav nav-tabs flex-lg-column" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Tus Datos Generales</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="password-tab" data-toggle="tab" href="#password" role="tab" aria-controls="password" aria-selected="false">Contraseña</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-xl-8 col-lg-9">
+              <div class="card">
+                <div class="card-body">
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" role="tabpanel" id="profile">
+                      
+                      <div class="media mb-4">
+                        <img alt="Image" src="assets/img/fotoPerfilGenerica.png" class="avatar avatar-lg">
+                        <div class="media-body ml-3">
+                          <div class="custom-file custom-file-naked d-block mb-1">
+                            <input type="file" class="custom-file-input d-none" id="avatar-file">
+                            <label class="custom-file-label position-relative" for="avatar-file">
+                              <span class="btn btn-primary">
+                                Subir avatar
+                              </span>
+                            </label>
+                          </div>
+                          <small>Para obtener mejores resultados, utilice una imagen de al menos 256 px por 256 px en formato .jpg o .png</small>
+                        </div>
+                      </div>
+
+                      <form id="formDatos">
+                        
+                        <h6>Identidad</h6>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Nro. de boleta</label>
+                          <div class="col">
+                            <input id="perfilNroDeBoleta" type="text" placeholder="Introduce tu número de boleta" value="" name="perfilNroDeBoleta" class="form-control" required="">
+                          </div>
+                        </div>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Nombres</label>
+                          <div class="col">
+                            <input id="perfilNombres" type="text" placeholder="Introduce tus nombres" value="" name="perfilNombres" class="form-control" required="">
+                          </div>
+                        </div>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Apellido paterno</label>
+                            <div class="col">
+                              <input id="perfilApellidoPaterno" type="text" placeholder="Introduce tu apellido paterno" value="" name="perfilApellidoPaterno" class="form-control" required="">
+                            </div>
+                        </div>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Apellido materno</label>
+                            <div class="col">
+                              <input id="perfilApellidoMaterno" type="text" placeholder="Introduce tu apellido materno" value="" name="perfilApellidoMaterno" class="form-control" required="">
+                            </div>
+                        </div>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Fecha de nacimiento</label>
+                          <div class="col">
+                            <input id="perfilFechaDeNacimiento" class="form-control col flatpickr-input" type="hidden" name="perfilFechaDeNacimiento" placeholder="Selecciona una fecha" data-flatpickr="" data-default-date="" data-alt-input="true" value="">
+                            <!--<input class="form-control col flatpickr-input form-control input" placeholder="Select a date" tabindex="0" type="text" readonly="readonly">-->
+                          </div>
+                        </div>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Género</label>
+                          <div class="col">
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="generoMasculino" name="genero" class="custom-control-input" required="">
+                              <label class="custom-control-label" for="generoMasculino">Masculino</label>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="generoFemenino" name="genero" class="custom-control-input" required="">
+                              <label class="custom-control-label" for="generoFemenino">Femenino</label>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="custom-control custom-radio d-inline-block">
+                              <input type="radio" id="generoOtro" name="genero" class="custom-control-input" required="">
+                              <label class="custom-control-label" for="generoOtro">Otro</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">CURP</label>
+                          <div class="col">
+                            <input id="perfilCURP" type="text" placeholder="Introduce tu CURP" value="" name="perfilCURP" class="form-control" required="">
+                          </div>
+                        </div>
+
+                        <div id="errorIdentidad" class="alert alert-danger text-small" role="alert">
+                          <span id="spanErrorIdentidad"></span>
+                        </div>
+                        
+                        <hr>
+
+                        <h6>Contacto</h6>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Calle y nro.</label>
+                          <div class="col">
+                            <input id="perfilCalleYNumero" type="text" placeholder="Introduce la calle y número de tu casa" value="" name="perfilCalleYNumero" class="form-control" required="">
+                          </div>
+                        </div>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Colonia</label>
+                          <div class="col">
+                            <input id="perfilColonia" type="text" placeholder="Introduce la colonia de tu casa" value="" name="perfilColonia" class="form-control" required="">
+                          </div>
+                        </div>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Alcaldía</label>
+                          <div class="col">
+                            <select id="alacaldia" name="perfilAlcalida" class="form-control">
+                              <option value="sinAlc">Sin especificar</option>
+                              <option value="a1">Álvaro Obregón</option>
+                              <option value="a2">Azcapotzalco</option>
+                              <option value="a3">Benito Juárez</option>
+                              <option value="a4">Coyoacán</option>
+                              <option value="a5">Cuajimalpa de Morelos</option>
+                              <option value="a6">Cuauhtémoc</option>
+                              <option value="a7">Gustavo A. Madero</option>
+                              <option value="a8">Iztacalco</option>
+                              <option value="a9">Iztapalapa</option>
+                              <option value="a10">La Magdalena Contreras</option>
+                              <option value="a11">Miguel Hidalgo</option>
+                              <option value="a12">Milpa alta</option>
+                              <option value="a13">Tláhuac</option>
+                              <option value="a14">Tlalpan</option>
+                              <option value="a15">Venustiano Carranza</option>
+                              <option value="a16">Xochimilco</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Codigo postal</label>
+                          <div class="col">
+                            <input id="perfilCodigoPostal" type="text" placeholder="Introduce el codigo postal de tu casa" value="" name="perfilCodigoPostal" class="form-control" required="">
+                          </div>
+                        </div>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Nro. de telefono o celular</label>
+                          <div class="col">
+                            <input id="perfilTelefonoOCelular" type="text" placeholder="Introduce tu número de telefono o celular" value="" name="perfilTelefonoOCelular" class="form-control" required="">
+                          </div>
+                        </div>
+
+                        <div id="errorContacto" class="alert alert-danger text-small" role="alert">
+                          <span id="spanErrorContacto"></span>
+                        </div>
+
+                        <hr>
+
+                        <h6>Procedencia</h6>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Escuela</label>
+                          <div class="col">
+                            <select id="escuela" name="perfilEscuela" class="form-control">
+                              <option value="otra">Otra</option>
+                              <option value="cyt1">CECyT 1 González Vázquez Vega</option>
+                              <option value="cyt2">CECyT 2 Miguel Bernard</option>
+                              <option value="cyt3">CECyT 3 Estanislao Ramírez Ruiz</option>
+                              <option value="cyt4">CECyT 4 Lázaro Cárdenas</option>
+                              <option value="cyt5">CECyT 5 Benito Juárez García</option>
+                              <option value="cyt6">CECyT 6 Miguel Othón de Mendizábal</option>
+                              <option value="cyt7">CECyT 7 Cuauhtémoc</option>
+                              <option value="cyt8">CECyT 8 Narciso Bassols García</option>
+                              <option value="cyt9">CECyT 9 Juan de Dios Bátiz</option>
+                              <option value="cyt10">CECyT 10 Carlos Vallejo Márquez</option>
+                              <option value="cyt11">CECyT 11 Wilfrido Massieu Pérez</option>
+                              <option value="cyt12">CECyT 12 José María Morelos y Pavón</option>
+                              <option value="cyt13">CECyT 13 Ricardo Flores Magón"</option>
+                              <option value="cyt14">CECyT 14 Luis Enrique Erro</option>
+                              <option value="cyt15">CECyT 15 Diódoro Antúnez Echegaray</option>
+                              <option value="cyt16">CECyT 16 </option>
+                              <option value="cyt17">CECyT 17</option>
+                              <option value="cyt18">CECyT 18</option>
+                              <option value="cyt19">CECyT 19 Leona Vicario</option>
+                              <option value="cet1">CET 1 Walter Cross Buchanan</option>
+                            </select>
+                          </div>
+                          <div id="colEscuelaOtra" class="col">
+                            <input id="perfilEscuelaOtra" type="text" placeholder="Introduce el nombre" value="" name="perfilEscuelaOtra" class="form-control" required="">
+                          </div>
+                        </div>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Entidad federativa</label>
+                          <div class="col">
+                            <select id="entidadFederativa" name="perfilEntidadFederativa" class="form-control">
+                              <option value="sinEnt">Sin especificar</option>
+                              <option value="ent1">Aguascalientes</option>
+                              <option value="ent2">Baja California</option>
+                              <option value="ent3">Baja California Sur</option>
+                              <option value="ent4">Campeche</option>
+                              <option value="ent5">Chiapas</option>
+                              <option value="ent6">Chihuahua</option>
+                              <option value="ent7">Ciudad de México</option>
+                              <option value="ent8">Coahuila de Zaragoza</option>
+                              <option value="ent9">Colima</option>
+                              <option value="ent10">Durango</option>
+                              <option value="ent11">Guanajuato</option>
+                              <option value="ent12">Guerrero</option>
+                              <option value="ent13">Hidalgo</option>
+                              <option value="ent14">Jalisco</option>
+                              <option value="ent15">Estado de México</option>
+                              <option value="ent16">Michoacán de Ocampo</option>
+                              <option value="ent17">Morelos</option>
+                              <option value="ent18">Nayarit</option>
+                              <option value="ent19">Nuevo León</option>
+                              <option value="ent20">Oaxaca</option>
+                              <option value="ent21">Puebla</option>
+                              <option value="ent22">Querétaro</option>
+                              <option value="ent23">Quintana Roo</option>
+                              <option value="ent24">San Luis Potosí</option>
+                              <option value="ent25">Sinaloa</option>
+                              <option value="ent26">Sonora</option>
+                              <option value="ent27">Tabasco</option>
+                              <option value="ent28">Tamaulipas</option>
+                              <option value="ent29">Tlaxcala</option>
+                              <option value="ent30">Veracruz de Ignacio de la Llave</option>
+                              <option value="ent31">Yucatán</option>
+                              <option value="ent32">Zacatecas</option>
+                          </select>
+                          </div>
+                        </div>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Promedio</label>
+                          <div class="col">
+                            <input id="perfilPromedio" type="text" placeholder="Introduce tu promedio" value="" name="perfilPromedio" class="form-control" required="">
+                          </div>
+                        </div>
+                        
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Nro. de la ESCOM en opciones</label>
+                          <div class="col">
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="opcion1" name="nroDeOpcion" class="custom-control-input" required="">
+                              <label class="custom-control-label" for="opcion1">1.<sup>a</sup></label>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="opcion2" name="nroDeOpcion" class="custom-control-input" required="">
+                              <label class="custom-control-label" for="opcion2">2.<sup>a</sup></label>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="custom-control custom-radio d-inline-block">
+                              <input type="radio" id="opcion3" name="nroDeOpcion" class="custom-control-input" required="">
+                              <label class="custom-control-label" for="opcion3">3.<sup>a</sup></label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div id="errorProcedencia" class="alert alert-danger text-small" role="alert">
+                          <span id="spanErrorProcedencia"></span>
+                        </div>
+
+                        <hr>
+
+                        <h6>Salud</h6>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Condición de salud</label>
+                          <div class="col">
+                            <select id="condicionDeSalud" name="perfilCondicionDeSalud" class="form-control">
+                              <option value="sinDisc">Sin discapacidad</option>
+                              <option value="disc1">Con discapacidad auditiva</option>
+                              <option value="disc2">Con discapacidad motriz usuaria de silla de ruedas</option>
+                              <option value="disc3">Con discapacidad motriz usuaria de muletas</option>
+                              <option value="disc4">Con discapacidad motriz usuaria de bastón</option>
+                              <option value="disc5">Con discapacidad visual</option>
+                              <option value="otra">Otra</option>
+                            </select>
+                          </div>
+                          <div id="colCondicionDeSaludOtra" class="col">
+                            <input id="perfilCondicionDeSaludOtra" type="text" placeholder="Introduce tu condición" value="" name="perfilCondicionDeSaludOtra" class="form-control" required="">
+                          </div>
+                        </div>
+
+                        <div id="errorSalud" class="alert alert-danger text-small" role="alert">
+                          <span id="spanErrorSalud"></span>
+                        </div>
+
+                        <hr>
+
+                        <div id="errorGeneral" class="alert alert-danger text-small" role="alert">
+                          <span>Revisa que tus datos estén bien escritos.</span>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                          <button id="btnGuardar" type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+
+                      </form>
+                    </div>
+                    <div class="tab-pane fade" role="tabpanel" id="password">
+                      <form>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Contraseña actual</label>
+                          <div class="col">
+                            <input type="password" placeholder="Introduce tu contraseña actual" name="password-current" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Nueva contraseña</label>
+                          <div class="col">
+                            <input type="password" placeholder="Introduce una nueva contraseña" name="password-new" class="form-control" />
+                            <small>La contraseña debe tener al menos 8 caracteres</small>
+                          </div>
+                        </div>
+                        <div class="form-group row align-items-center">
+                          <label class="col-3">Confirmar Contraseña</label>
+                          <div class="col">
+                            <input type="password" placeholder="Confirma tu nueva contraseña" name="password-new-confirm" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                          <button id="btnCambiarContrasenia" type="submit" class="btn btn-primary">Cambiar la contraseña</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Required vendor scripts (Do not remove) -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+
+    <!-- Optional Vendor Scripts (Remove the plugin script here and comment initializer script out of index.js if site does not use that feature) -->
+
+    <!-- Autosize - resizes textarea inputs as user types -->
+    <script type="text/javascript" src="assets/js/autosize.min.js"></script>
+    <!-- Flatpickr (calendar/date/time picker UI) -->
+    <script type="text/javascript" src="assets/js/flatpickr.min.js"></script>
+    <!-- Prism - displays formatted code boxes -->
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <!-- Shopify Draggable - drag, drop and sort items on page -->
+    <script type="text/javascript" src="assets/js/draggable.bundle.legacy.js"></script>
+    <script type="text/javascript" src="assets/js/swap-animation.js"></script>
+    <!-- Dropzone - drag and drop files onto the page for uploading -->
+    <script type="text/javascript" src="assets/js/dropzone.min.js"></script>
+    <!-- List.js - filter list elements -->
+    <script type="text/javascript" src="assets/js/list.min.js"></script>
+
+    <!-- Required theme scripts (Do not remove) -->
+    <script type="text/javascript" src="assets/js/theme.js"></script>
+
+    <!-- This appears in the demo only - demonstrates different layouts -->
+    <style type="text/css">
+      .layout-switcher{ position: fixed; bottom: 0; left: 50%; transform: translateX(-50%) translateY(73px); color: #fff; transition: all .35s ease; background: #343a40; border-radius: .25rem .25rem 0 0; padding: .75rem; z-index: 999; }
+            .layout-switcher:not(:hover){ opacity: .95; }
+            .layout-switcher:not(:focus){ cursor: pointer; }
+            .layout-switcher-head{ font-size: .75rem; font-weight: 600; text-transform: uppercase; }
+            .layout-switcher-head i{ font-size: 1.25rem; transition: all .35s ease; }
+            .layout-switcher-body{ transition: all .55s ease; opacity: 0; padding-top: .75rem; transform: translateY(24px); text-align: center; }
+            .layout-switcher:focus{ opacity: 1; outline: none; transform: translateX(-50%) translateY(0); }
+            .layout-switcher:focus .layout-switcher-head i{ transform: rotateZ(180deg); opacity: 0; }
+            .layout-switcher:focus .layout-switcher-body{ opacity: 1; transform: translateY(0); }
+            .layout-switcher-option{ width: 72px; padding: .25rem; border: 2px solid rgba(255,255,255,0); display: inline-block; border-radius: 4px; transition: all .35s ease; }
+            .layout-switcher-option.active{ border-color: #007bff; }
+            .layout-switcher-icon{ width: 100%; border-radius: 4px; }
+            .layout-switcher-body:hover .layout-switcher-option:not(:hover){ opacity: .5; transform: scale(0.9); }
+            @media all and (max-width: 990px){ .layout-switcher{ min-width: 250px; } }
+            @media all and (max-width: 767px){ .layout-switcher{ display: none; } }
+    </style>
+    <div class="layout-switcher" tabindex="1">
+      <div class="layout-switcher-head d-flex justify-content-between">
+        <span>Select Layout</span>
+        <i class="material-icons">arrow_drop_up</i>
+      </div>
+      <div class="layout-switcher-body">
+
+      </div>
+    </div>
+
+    <script type="text/javascript" src="assets/js/scripts/datosGeneralesControlador.js"></script>
+
+  </body>
+
+</html>
