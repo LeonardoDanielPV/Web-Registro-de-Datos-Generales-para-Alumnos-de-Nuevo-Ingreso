@@ -1,5 +1,5 @@
 CREATE TABLE `salud` (
-  `id` INT(1) PRIMARY KEY NOT NULL,
+  `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `condicion` VARCHAR(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -21,12 +21,13 @@ CREATE TABLE `usuario` (
   `condicion` INT(1) NOT NULL,
   `grupo` VARCHAR(5) NOT NULL,
   `password` varchar(32) NOT NULL,
-  FOREIGN KEY (condicion) REFERENCES salud(id),
-  FOREIGN KEY (grupo) REFERENCES examen(grupo)
+  PRIMARY KEY (`boleta`),
+  FOREIGN KEY (`condicion`) REFERENCES `salud`(`id`),
+  FOREIGN KEY (`grupo`) REFERENCES `examen`(`grupo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 CREATE TABLE `contacto` (
-  `boleta` varchar(10)NOT NULL,
+  `boleta` varchar(10) NOT NULL,
   `calleyNro` varchar(100) NOT NULL,
   `colonia` varchar(64) NOT NULL,
   `alcaldia` varchar(64) DEFAULT NULL,
@@ -34,17 +35,18 @@ CREATE TABLE `contacto` (
   `telefono` INT(12) NOT NULL,
   `entfed` varchar(64) DEFAULT NULL,
   `email` varchar(64) NOT NULL,
-  FOREIGN KEY (boleta) REFERENCES usuario(boleta)
+  PRIMARY KEY (`boleta`),
+  FOREIGN KEY (`boleta`) REFERENCES `usuario`(`boleta`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
-INSERT INTO `salud` (`id`, `condicion`) VALUES
-('1','Sin Discapacidad'),
-('2','Con discapacidad auditiva'),
-('3','Con discapacidad motriz usuaria de silla de ruedas'),
-('4','Con discapacidad motriz usuaria de muletas'),
-('5','Con discapacidad motriz usuaria de bastón'),
-('6','Con discapacidad visual'),
-('7','Otra');
+INSERT INTO `salud` (`condicion`) VALUES
+('Sin Discapacidad'),
+('Con discapacidad auditiva'),
+('Con discapacidad motriz usuaria de silla de ruedas'),
+('Con discapacidad motriz usuaria de muletas'),
+('Con discapacidad motriz usuaria de bastón'),
+('Con discapacidad visual'),
+('Otra');
 
 INSERT INTO `examen` (`grupo`, `horario`) VALUES
 ('1AM1','07:00:00'),
